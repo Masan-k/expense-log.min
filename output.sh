@@ -1,0 +1,1 @@
+awk -F, 'BEGIN{OFS="\t"} {print $1, $2, $3}' expence.txt > expence.tsv
