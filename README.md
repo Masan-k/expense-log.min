@@ -1,1 +1,1 @@
-# expense-log
+# expense-log.min
