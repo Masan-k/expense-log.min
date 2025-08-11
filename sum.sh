@@ -13,11 +13,14 @@ END {
     PROCINFO["sorted_in"] = "@ind_str_asc"
     for (key in sum) {
         split(key, parts, SUBSEP)
+        printf "%s\t%s\t%d\n", parts[1], parts[2], sum[key] > "output/expense_by_month_category.csv"
+    }
+    for (key in sum) {
+        split(key, parts, SUBSEP)
         printf "%s\t%s\t%d\n", parts[1], parts[2], sum[key]
     }
 }
-' expence.txt
-
+' input/expense.csv
 echo "--------------"
 echo "合計（月毎）"
 echo "--------------"
@@ -31,5 +34,8 @@ END {
     for (m in sum) {
         print m, sum[m]
     }
+    for (m in sum) {
+        print m, sum[m] > "output/expense_by_month.csv"
+    }
 }
-' expence.txt | sort
+' input/expense.csv | sort 
