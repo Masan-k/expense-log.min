@@ -1,0 +1,3 @@
+[submodule "expense-log-private.min"]
+	path = expense-log-private.min
+	url = https://github.com/Masan-k/expense-log-private.min.git
