@@ -1,3 +1,4 @@
+cd "$(dirname "$0")"
 awk -F, 'BEGIN{OFS="\t"} {print $1, $2, $3, $4, $5}' input/expense.csv > output/expense.csv
 echo "--------------------------"
 echo "合計（月・カテゴリ毎）"
